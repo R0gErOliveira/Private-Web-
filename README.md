@@ -1,7 +1,7 @@
 PRIVATE PARKING 
 
 STATUS DO PROJETO: 
-Enm desenvolvimento.
+Em desenvolvimento.
 
 TECNOLOGIAS APLICADAS:
 Linguagem de Programação: JAVA 
