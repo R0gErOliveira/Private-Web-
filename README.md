@@ -1,7 +1,7 @@
 PRIVATE PARKING 
 
 STATUS DO PROJETO: 
-En desenvolvimento.
+Enm desenvolvimento.
 
 TECNOLOGIAS APLICADAS:
 Linguagem de Programação: JAVA 
@@ -10,7 +10,7 @@ Controle de versão: GIT
 Repositório: GIT HUB 
 
 TIME DE DESENVOLVEDORES:
-Roger Oliveira - DesenvoLvedor responsável principal pelo projeto
+Roger Oliveira - Desenvolvedor responsável principal pelo projeto
 GitHub: R0gErOliveira
 
 OBJETIVO DO SOFTWARE:
