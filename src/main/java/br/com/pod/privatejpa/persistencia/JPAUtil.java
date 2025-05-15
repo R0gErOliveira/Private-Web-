@@ -31,7 +31,7 @@ public class JPAUtil {
     }
 
     //Fecha o gerenciador de entidades e a fábrica de gerenciadores
-    public static void closeEtityManager() {
+    public static void closeEntityManager() {
         if (em.isOpen() && em != null) {
             em.close();
             fabrica.close();

@@ -1,6 +1,6 @@
 package br.com.pod.privatejpa.persistencia;
 
-import br.com.pod.privatejpa.gui.Cadastro;
+
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.PersistenceContext;
@@ -25,7 +25,7 @@ public class ClienteDAO {
             em.getTransaction().rollback();
             throw e;
         } finally {
-            JPAUtil.closeEtityManager();
+            JPAUtil.closeEntityManager();
         }
     }
 
@@ -49,7 +49,7 @@ public class ClienteDAO {
             e.printStackTrace();
             throw new RuntimeException("Erro ao excluir: " + e.getMessage(), e); // Lança uma RuntimeException
         } finally {
-            JPAUtil.closeEtityManager();
+            JPAUtil.closeEntityManager();
         }
     }
 
