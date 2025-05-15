@@ -70,5 +70,5 @@
             </plugin>
         </plugins>
     </build>
-    <name>PrivateJPA</name>
+    <name>PrivateJPAWeb</name>
 </project>
