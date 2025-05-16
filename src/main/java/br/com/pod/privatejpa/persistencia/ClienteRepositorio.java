@@ -7,6 +7,7 @@ import java.util.List;
 
 public class ClienteRepositorio {
 
+    // cadastra um novo Cliente no banco de dados 
     public void cadastrar(Cliente cliente) {
         EntityManager em = JPAUtil.getEntityManager();
         try {
@@ -21,6 +22,7 @@ public class ClienteRepositorio {
         }
     }
 
+    // exclui um Cliente no banco com base no id 
     public void excluirCliente(Long id) {
         EntityManager em = JPAUtil.getEntityManager();
         try {
@@ -40,6 +42,7 @@ public class ClienteRepositorio {
         }
     }
 
+    // Busca um cliente pela placa do veículo associado 
     public Cliente buscarPorPlaca(String placa) {
         EntityManager em = JPAUtil.getEntityManager();
         try {
@@ -54,6 +57,7 @@ public class ClienteRepositorio {
         }
     }
 
+    // Busca um Cliente por nome ignorando letras maísculas ou minusculas 
     public Cliente buscarPorNome(String nome) {
         EntityManager em = JPAUtil.getEntityManager();
         try {
