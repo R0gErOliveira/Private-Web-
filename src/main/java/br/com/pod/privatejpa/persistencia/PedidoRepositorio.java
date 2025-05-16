@@ -3,8 +3,6 @@ package br.com.pod.privatejpa.persistencia;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.TypedQuery;
-import br.com.pod.privatejpa.persistencia.Pedido;
-import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -29,10 +27,12 @@ public class PedidoRepositorio {
         }
     }
 
+    // busca um pedido no banco de dados pelo id 
     public Pedido buscarPorId(int id) {
         return entityManager.find(Pedido.class, id);
     }
 
+    // exclui um pedido no banco dados pelo id se ele existir 
     public void excluirPorId(int id) {
         Pedido pedido = buscarPorId(id);
         if (pedido != null) {
@@ -42,6 +42,7 @@ public class PedidoRepositorio {
         }
     }
 
+    // verifica se existe um pedido finalizado com data de saída para determinada placa 
     public boolean pedidoFinalizadoPorPlaca(String placa) {
         try {
             String jpql = "SELECT COUNT(p) FROM Pedido p "
@@ -58,6 +59,7 @@ public class PedidoRepositorio {
         }
     }
 
+    // lista pedido com base me pesquisa por nome cliente ou placa do veículo 
     public List<Pedido> listarPorPesquisa(String pesquisa) {
         String jpql = "SELECT p FROM Pedido p "
                 + "JOIN FETCH p.cliente c "
@@ -68,6 +70,7 @@ public class PedidoRepositorio {
         return query.getResultList();
     }
 
+    // busca um pedido associado a um cliente específico, com base no id do cliente 
     public Pedido buscarPorClienteId(Long clienteId) {
         EntityManager em = JPAUtil.getEntityManager();
         try {
