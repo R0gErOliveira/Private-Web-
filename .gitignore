@@ -1,0 +1,29 @@
+# Arquivos compilados do Java
+*.class
+
+# Arquivos de Log
+*.log
+
+# Arquivos de pacotes
+*.jar
+*.war
+*.ear
+
+# Pasta de build do Maven
+target/
+
+# Arquivos de configuração de IDEs
+.idea/
+.project
+.classpath
+.settings/
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
